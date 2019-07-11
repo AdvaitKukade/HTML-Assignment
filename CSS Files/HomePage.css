@@ -37,8 +37,8 @@ ul a
 
 header ul li
 {
-    float:left;
-    /* padding:15px; */
+    float: left;
+    margin: 6px -7px 1px 14px;
 }
 
 header ul
@@ -82,6 +82,12 @@ header ul
 {
     
     background-color:rgba(233, 233, 233, 0.1);
+}
+
+.options_img
+{
+    float: right;
+    padding-right: 2px;
 }
 
 /* ---------------------------------------------------------Code for 4 Rectangles---------------------------------------------------- */
@@ -230,8 +236,8 @@ h1
 .main_parent
 {
     float: left;
-    width: 22.9%;
-    margin-top:21px;
+    width: 23.43%;
+    margin-top: 21px;
     
 }
 
@@ -285,9 +291,20 @@ h1
     margin: 38px 89px 37px 90px;
 }
 
-.main_parent
+.section2 .inner-container .main_parent:nth-child(2),.section2 .inner-container .main_parent:nth-child(3),.section2 .inner-container .main_parent:nth-child(4)
 {
     margin-right:24px;
+}
+
+.milestone_bottom_box p
+{
+    display: inline-block;
+    margin: 20px 0px 20px 38px;
+    margin-left: 40px;
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
 }
 
 .milestone_bottom_box
@@ -297,14 +314,14 @@ h1
     padding: 8px 2px 0px 15px;
 }
 
-.milestone_bottom_box span:nth-child(1)
+/* .milestone_bottom_box span:nth-child(1)
 {
     text-transform:uppercase;
     font-family:Lato;
     font-size:16px;
     vertical-align:middle;
     padding-top:20px;
-}
+} */
 
 .milestone_bottom_box span:nth-child(2)
 {
@@ -313,6 +330,19 @@ h1
     font-size:34px;
     color:#E1E2E9;
     float: right;
+    margin:9px 22px 7px 0px;
+}
+
+.img_rightarrow
+{
+    float:right;
+    padding-right:2px;
+}
+
+.img_leftarrow
+{
+    float:right;
+    padding-right:27px;
 }
 
 /* --------------------------------------------------Code for Progress bar------------------------------------------------*/
@@ -362,8 +392,6 @@ h1
     border-bottom: 1px solid #EBECF2;
     
 }
-
-
 
 .checklistItems
 {
@@ -442,7 +470,7 @@ p .checklist_item2
 }
 /*---------------------------------------------Code for Work Status section of the page-------------------------------------------------- */
 
-.rectangle
+/* .rectangle
 {
     display:inline-block;
     background-color:#5FCCC1;
@@ -459,7 +487,7 @@ p .checklist_item2
         border-right-color: transparent;
         border-bottom-color: transparent;
         background-color: white;
-}
+} */
 
 .rightBlock,.leftBlock
 {
@@ -520,6 +548,8 @@ p .checklist_item2
     height: 9px;
     background-color: #5FCCC1;
     border-radius:5px;
+    font-size: 12px;
+    font-family: Lato;
 }
 
 .rightBlockItems ul li:nth-child(2) .rightblock_progressbar
