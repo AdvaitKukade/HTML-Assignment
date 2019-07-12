@@ -1,6 +1,7 @@
 *
 {
     margin:0px auto;
+    box-sizing: border-box;
 }
 .outer-container
 {
@@ -13,8 +14,6 @@
 {
     margin-left:24px;
     margin-right:24px;
-    font-family:Quicksand;
-    padding:10px 0px;
 }
 
 .clearfix
@@ -27,6 +26,10 @@
 header
 {
     background-color:#384B59;
+    height:60px;
+    padding:10px 0px;
+    font-family:Lato;
+    font-size:14px;
 }
 
 ul a
@@ -38,13 +41,19 @@ ul a
 header ul li
 {
     float: left;
-    margin: 6px -7px 1px 14px;
+    /* background-color:blue; */
 }
 
 header ul
 {
     float:right;
 }
+
+.inner-container a:nth-child(2)
+{
+    margin-left:60px;
+    vertical-align:middle;
+} 
 
 .list li:nth-child(1)::before
 {
@@ -57,8 +66,7 @@ header ul
     text-align: center;
     height: 19px;
     width: 19px;
-    /* display: inline-block; */
-    bottom: 50%;
+    top:0%;
 
 }
 
@@ -67,16 +75,31 @@ header ul
     position:relative;
 }
 
+.list li:nth-child(1)
+{
+    margin-right:13px;
+}
+
+.list li:nth-child(2)
+{
+    margin-right:10px;
+}
+
+.list li
+{
+    height:40px;
+    width:40px;
+}
 
 .list li a
 {
-    padding:15px;   
+    padding:10px;   
 }
 
-.list li:nth-child(2) a
+/* .list li:nth-child(2) a
 {
     padding:13px 15px;   
-}
+} */
 
 .list li a:hover
 {
@@ -87,7 +110,7 @@ header ul
 .options_img
 {
     float: right;
-    padding-right: 2px;
+    padding-right: 12px;
 }
 
 /* ---------------------------------------------------------Code for 4 Rectangles---------------------------------------------------- */
@@ -110,6 +133,7 @@ header ul
     font-family:Quicksand;
     display:inline-block;
     line-height: 22px;
+    font-size:18px;
 }
 
 .dashboardtitle
@@ -118,17 +142,60 @@ header ul
     text-transform: uppercase;
 }
 
-.menu1
-{
-    margin-left:60px;
-    vertical-align:10px;
-}
 
 .title
 {
     text-transform: uppercase;
     margin-top:30px;
 
+}
+
+.rectangle1 .content p:nth-child(1)
+{
+    font-family:Quicksand;
+    font-size:16px;
+}
+
+.rectangle1 .content p:nth-child(2)
+{
+    font-family:Quicksand;
+    font-size:30px;
+}
+
+.rectangle2 .content p:nth-child(1)
+{
+    font-family:Quicksand;
+    font-size:16px;
+}
+
+.rectangle2 .content p:nth-child(2)
+{
+    font-family:Quicksand;
+    font-size:30px;
+}
+
+.rectangle3 .content p:nth-child(1)
+{
+    font-family:Quicksand;
+    font-size:16px;
+}
+
+.rectangle3 .content p:nth-child(2)
+{
+    font-family:Quicksand;
+    font-size:30px;
+}
+
+.rectangle4 .content p:nth-child(1)
+{
+    font-family:Quicksand;
+    font-size:16px;
+}
+
+.rectangle4 .content p:nth-child(2)
+{
+    font-family:Quicksand;
+    font-size:30px;
 }
 
 .img_options
@@ -176,8 +243,15 @@ header ul
 .rectangle_1_padding
 {
     background-color:rgba(0, 0, 0, 0.1);
-    padding:34px 33px;
+    width: 90px;
+    height: 110px;
+    text-align: center;
     float:right;
+}
+
+.rectangle_1_padding img
+{
+    margin-top:34px;
 }
 
 .rectangle2
@@ -186,12 +260,6 @@ header ul
     margin-right:24px;
 }
 
-.rectangle_2_padding
-{
-    background-color:rgba(0, 0, 0, 0.1);
-    padding:32px 22px 31px 23px;
-    float:right;
-}
 
 .rectangle3
 {
@@ -199,23 +267,10 @@ header ul
     margin-right:24px;
 }
 
-.rectangle_3_padding
-{
-    background-color:rgba(0, 0, 0, 0.1);
-    padding:34px 28px 33px;
-    float:right;
-}
 
 .rectangle4
 {
     background-color:#2095F2;
-}
-
-.rectangle_4_padding
-{
-    background-color:rgba(0, 0, 0, 0.1);
-    padding:32px 26px 31px 26px;
-    float:right;   
 }
 
 h2
@@ -238,6 +293,7 @@ h1
     float: left;
     width: 23.43%;
     margin-top: 21px;
+    text-align:center;
     
 }
 
@@ -247,6 +303,18 @@ h1
     height: 166px;
     background-color: #FFFFFF;
     border-bottom: 1px solid #EBECF2;
+}
+
+.milestone_top_box .milestone_value
+{
+    font-family:Quicksand;
+    font-size:30px;
+}
+
+.milestone_top_box .milestone_percent
+{
+    font-family:Quicksand;
+    font-size:16px;
 }
 
 .milestone_value
@@ -260,8 +328,9 @@ h1
 .milestone_percent
 {
     font-size: 16px;
-    text-align: center;
+    padding-left: 36px;
     line-height: 24px;
+    padding-right: 39px;
 }
 
 
@@ -299,8 +368,10 @@ h1
 .milestone_bottom_box p
 {
     display: inline-block;
-    margin: 20px 0px 20px 38px;
-    margin-left: 40px;
+    /* margin: 20px 0px 20px 38px;
+    margin-left: 40px; */
+    margin-left: 43px;
+    margin-top: 20px;
     font-family: Lato;
     font-size: 16px;
     line-height: 19px;
@@ -311,26 +382,46 @@ h1
 {
     background-color: #FFFFFF;
     text-align: center;
-    padding: 8px 2px 0px 15px;
+    height: 59px;
 }
 
-/* .milestone_bottom_box span:nth-child(1)
-{
-    text-transform:uppercase;
-    font-family:Lato;
-    font-size:16px;
-    vertical-align:middle;
-    padding-top:20px;
-} */
 
-.milestone_bottom_box span:nth-child(2)
+
+.milestone_bottom_box_1 p
 {
-    font-family:Quicksand;
-    font-weight:bold;
-    font-size:34px;
-    color:#E1E2E9;
+    display: inline-block;
+
+    margin-left: 45px;
+    margin-top: 20px;
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+
+.milestone_bottom_box_1 span:nth-child(1)
+{
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 34px;
+    color: #E1E2E9;
     float: right;
-    margin:9px 22px 7px 0px;
+    margin-right: 22px;
+    margin-top: 12px;
+}
+
+
+
+.milestone_bottom_box span:nth-child(1)
+{
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 34px;
+    color: #E1E2E9;
+    float: right;
+    margin-right: 22px;
+    margin-top: 12px;
 }
 
 .img_rightarrow
@@ -349,15 +440,16 @@ h1
 
 .progress_bar
 {
-    width:28%;
-    height:9px;
+    width:26%;
+    height:5px;
     background-color:#D4C69B;
-    
+    border-radius: 2px 2px 2px 2px;
 }
 
 .myprogress
 {
-    width:100%;
+    border-radius: 4px;
+    padding: 2px;
     margin-top:58px;
     margin-bottom:69px;
     background-color:#FFFFFF;
@@ -470,24 +562,6 @@ p .checklist_item2
 }
 /*---------------------------------------------Code for Work Status section of the page-------------------------------------------------- */
 
-/* .rectangle
-{
-    display:inline-block;
-    background-color:#5FCCC1;
-    position:relative;
-}
-
-.rectangle::after
-{
-        content:"";
-        height: 5px;
-        width: 5px;
-        transform: rotate(45deg);
-        border: 1px solid #DCDCDC;
-        border-right-color: transparent;
-        border-bottom-color: transparent;
-        background-color: white;
-} */
 
 .rightBlock,.leftBlock
 {
@@ -534,11 +608,12 @@ p .checklist_item2
 
 .rbprogressbar
 {
-    width:66%;
+    width:332px;
     background-color:#E1E2E6;
     border-radius:5px;
     float:right; 
     margin-top: 8px;   
+    height:9px;
 }
 
 .rightblock_progressbar
@@ -555,18 +630,31 @@ p .checklist_item2
 .rightBlockItems ul li:nth-child(2) .rightblock_progressbar
 {
     width:58%;
+    position:relative;
+    height: 9px;
+    background-color: #5FCCC1;
+    border-radius:5px;
+    font-size: 12px;
+    font-family: Lato;
+
 }
 
 .rightBlockItems ul li:nth-child(3) .rightblock_progressbar
 {
     width:32%;
+    position:relative;
+    height: 9px;
+    background-color: #5FCCC1;
+    border-radius:5px;
+    font-size: 12px;
+    font-family: Lato;
 }
 
 .rightblock_progressbar span
 {
     position: absolute;
     content: "";
-    right: -12%;
+    right: -15px;
     bottom: 200%;
     background-color: #5FCCC1;
     padding: 5px;
@@ -586,11 +674,37 @@ p .checklist_item2
     bottom: -12%;
 }
 
+.rightblock_progressbar_1 span
+{
+    position: absolute;
+    content: "";
+    right: -12%;
+    bottom: 200%;
+    background-color: #5FCCC1;
+    padding: 5px;
+    border-radius: 5px;
+    color:white;
+}
 
-.rightBlockItems li span:nth-child(1)
+.rightblock_progressbar_2 span
+{
+    position: absolute;
+    content: "";
+    right: -12%;
+    bottom: 200%;
+    background-color: #5FCCC1;
+    padding: 5px;
+    border-radius: 5px;
+    color:white;
+}
+
+
+
+
+/* .rightBlockItems li span:nth-child(1)
 {
     float:left;
-}
+} */
 
 /* --------------------------------------------Code for the footer of the page ------------------------------------------------ */
 
