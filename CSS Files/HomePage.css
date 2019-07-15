@@ -96,11 +96,6 @@ header ul
     padding:10px;   
 }
 
-/* .list li:nth-child(2) a
-{
-    padding:13px 15px;   
-} */
-
 .list li a:hover
 {
     
@@ -367,7 +362,7 @@ h1
 
 .milestone_bottom_box p
 {
-    padding: 20px 91px;
+    padding: 20px 45px;
     font-family: Lato;
     font-size: 15px;
     line-height: 19px;
@@ -532,13 +527,6 @@ h1
     float:right;
 }
 
-.checklistItems ul li p
-{
-    text-align:center;
-    font-size:13px;
-    vertical-align: text-top;
-}
-
 p .checklist_item2
 {
     margin-left:120px;
@@ -555,6 +543,14 @@ p .checklist_item2
     width:17px;
     border:1px solid #CED4D9;
     background-color:#FFFFFF;
+    float:right;
+}
+
+.recent_task_date
+{
+    width:80px;
+    text-align:center;
+    font-size:13px;
     float:right;
 }
 /*---------------------------------------------Code for Work Status section of the page-------------------------------------------------- */
@@ -622,6 +618,7 @@ p .checklist_item2
     border-radius:5px;
     font-size: 12px;
     font-family: Lato;
+    max-width:100%;
 }
 
 .rightBlockItems ul li:nth-child(2) .rightblock_progressbar
@@ -633,6 +630,7 @@ p .checklist_item2
     border-radius:5px;
     font-size: 12px;
     font-family: Lato;
+    max-width:100%;
 
 }
 
@@ -645,6 +643,7 @@ p .checklist_item2
     border-radius:5px;
     font-size: 12px;
     font-family: Lato;
+    max-width:100%;
 }
 
 .rightblock_progressbar span
@@ -695,14 +694,6 @@ p .checklist_item2
     color:white;
 }
 
-
-
-
-/* .rightBlockItems li span:nth-child(1)
-{
-    float:left;
-} */
-
 /* --------------------------------------------Code for the footer of the page ------------------------------------------------ */
 
 footer
@@ -711,7 +702,7 @@ footer
     text-align:right;
     margin-top:111px;
     text-transform:uppercase;
-    padding:15px;
+    padding:15px 25px;
     color:#9CAAB4;
     font-family:Lato;
     font-size:11px;
