@@ -59,7 +59,7 @@ header ul
 {
     content: "6";
     position: absolute;
-    right: 5%;
+    right: 0%;
     border-radius: 50%;
     background-color: red;
     color: white;
@@ -367,22 +367,19 @@ h1
 
 .milestone_bottom_box p
 {
-    display: inline-block;
-    /* margin: 20px 0px 20px 38px;
-    margin-left: 40px; */
-    margin-left: 43px;
-    margin-top: 20px;
+    padding: 20px 91px;
     font-family: Lato;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 19px;
     text-transform: uppercase;
+    word-wrap: break-word;
 }
 
 .milestone_bottom_box
 {
     background-color: #FFFFFF;
     text-align: center;
-    height: 59px;
+    line-height: 59px;
 }
 
 
@@ -421,7 +418,7 @@ h1
     color: #E1E2E9;
     float: right;
     margin-right: 22px;
-    margin-top: 12px;
+    /* margin-top: 12px; */
 }
 
 .img_rightarrow
