@@ -461,19 +461,21 @@ h1
 
 .heading h3
 {
-    font-size:16px; 
-    /* margin-top:20px;
-    margin-bottom:19px; */
+    font-size:16px;
     text-transform:uppercase;
     display:inline-block;
+    font-weight:700;
 }
  
 .heading
 {
     font-family:Quicksand;
     text-transform:uppercase;
-    padding: 21px 30px 17px;
     border-bottom: 1px solid #EBECF2;
+    padding-left: 28px;
+    padding-top: 21px;
+    padding-bottom: 17px;
+    padding-right: 18px;
     
 }
 
@@ -594,7 +596,7 @@ p .checklist_item2
 {
     font-weight:bold;
     font-size:16px;
-    margin-top:58px;
+    margin-top:68px;
     color:#363F45;
     margin-bottom:56px;
 } 
