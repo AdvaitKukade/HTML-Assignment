@@ -19,5 +19,14 @@ jobs:
           name: "What was my custom environment variable ?"
           command: echo ${MY_ENV_VAR}
       - run:
-          name: "What machine config am i using ?"
-          command: echo $CIRCLE_EXECUTOR 
+          name: "Which JOB am i using / executing currently ?"
+          command: echo $CIRCLE_JOB 
+      - run:
+          name: "What is the URL of current build ?"
+          command: echo $CIRCLE_BUILD_URL           
+      - run:
+          name: "The number of previous builds on the current branch ?"
+          command: echo $CIRCLE_PREVIOUS_BUILD_NUM    
+      - run:
+          name: "Name of the repository of the current project ?"
+          command: echo $CIRCLE_PROJECT_REPONAME    
