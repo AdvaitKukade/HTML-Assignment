@@ -5,13 +5,15 @@ jobs:
       - image: nginx
     steps:
       - save_cache:
-          key: v1-myapp-cache{ arch }
+          key: v1-myapp-cache{{ arch }}
+          paths:
+            - ~/d1
   html_job:
      docker:
        - image: advaitkukade/html:v2.0
      steps:
        - restore_cache:
-            key: v1-myapp-cache{ arch }
+            key: v1-myapp-cache{{ arch }}
 workflows:
   version: 2 
   workflow_1:
