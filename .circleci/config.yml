@@ -3,10 +3,7 @@ jobs:
   build:
     docker:
       - image: smaant/lein-flyway:2.7.1-4.0.3
-    steps:
-      - checkout
-      - run:
-          name: Run Migrations 
-          command: sql/docker-entrypoint.sh sql 
-          environment:
-            DATABASE_URL: postgres://conductor:@localhost:5432/conductor_test
+      - image: circleci/postgres:9.6-jessie
+        environment:
+          POSTGRES_USER: conductor
+          POSTGRES_DB: conductor_test
