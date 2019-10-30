@@ -4,19 +4,14 @@ jobs:
     docker: 
       - image: nginx
     steps:
-    - run: echo "In nginx_job"
-    - run: pwd
-    - run: ls -al
-    - run: cd /usr/
-    - run: ls -al
+      - save_cache:
+          key: v1-myapp-cache{ arch }
   html_job:
      docker:
        - image: advaitkukade/html:v2.0
      steps:
-     - checkout
-     - run: echo "In html_job"
-     - run: cat index.html
-     
+       - restore_cache:
+            key: v1-myapp-cache{ arch }
 workflows:
   version: 2 
   workflow_1:
