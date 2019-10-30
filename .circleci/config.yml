@@ -2,8 +2,6 @@ version: 2
 jobs:
   build:
     docker:
-      - image: smaant/lein-flyway:2.7.1-4.0.3
-      - image: circleci/postgres:9.6-jessie
-        environment:
-          POSTGRES_USER: conductor
-          POSTGRES_DB: conductor_test
+      - image: buildpack-deps:trusty
+    environment:
+      FOO: bar
