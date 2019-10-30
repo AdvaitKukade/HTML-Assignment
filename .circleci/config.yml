@@ -6,7 +6,7 @@ jobs:
       - image: advaitkukade/html:v2.0
     steps:
     - checkout
-    - run: cd /  
+    - run: cd .. 
     - run: ls -al
 workflows:
   version: 2 
