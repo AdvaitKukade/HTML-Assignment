@@ -6,7 +6,7 @@ jobs:
     steps:
     - run: echo "In nginx_job"
     - run: cd ..
-    - run: cp index.html /usr/share/nginx/html/
+    - run: cp /root/project/index.html /usr/share/nginx/html/
     - run: File Copied Successfully 
     - run: cd /usr/share/nginx/html/
     - run: ls -al
