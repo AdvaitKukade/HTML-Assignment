@@ -7,7 +7,7 @@ jobs:
     - run: echo "In nginx_job"
     - run: pwd
     - run: ls -al
-    - run: cd /usr/share/nginx/html/
+    - run: cd /usr/
     - run: ls -al
   html_job:
      docker:
