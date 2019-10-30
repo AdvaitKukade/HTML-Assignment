@@ -1,22 +1,20 @@
 version: 2
 jobs:
-  nginx_job:
-    docker: 
-      - image: nginx
+  build:
+    docker:
+      - image: circleci/node:10.0.0-browsers 
     steps:
-      - save_cache:
-          key: v1-myapp-cache{{ arch }}
-          paths:
-            - ~/d1
-  html_job:
-     docker:
-       - image: advaitkukade/html:v2.0
-     steps:
-       - restore_cache:
-            key: v1-myapp-cache{{ arch }}
-workflows:
-  version: 2 
-  workflow_1:
-    jobs:
-      - nginx_job
-      - html_job 
+      - checkout 
+      - run: 
+          name: "Setup custom environment variables"
+          command: | 
+            echo 'export MY_ENV_VAR="foo" ' >> $BASH_ENV
+      - run:
+          name: "What branch am I on ?"
+          command: echo ${CIRCLE_BRANCH}
+      - run:
+          name: "What branch am I on now?"
+          command: echo $CIRCLE_BRANCH 
+      - run:
+          name: "What was my custom environment variable ?"
+          command: echo ${MY_ENV_VAR}
