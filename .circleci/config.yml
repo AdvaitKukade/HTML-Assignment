@@ -1,16 +1,27 @@
 version: 2
 jobs:
-  build:
+  nginx_job:
     docker: 
       - image: nginx:latest 
-      - image: advaitkukade/html:v2.0
     steps:
     - checkout
-    - run: cd .. 
+    - run: echo "In nginx_job"
+    - run: cd / 
     - run: ls -al
+  html_job:
+     docker:
+       - image: advaitkukade/html:v2.0
+     steps:
+     - checkout
+     - run: echo "In html_job"
+     - run: cat index.html
+     
 workflows:
   version: 2 
-  build_one:
-    jobs:
-      - build
-    
+  workflow1_nginx_html:
+  jobs:
+    - nginx_job
+    - html_job 
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
