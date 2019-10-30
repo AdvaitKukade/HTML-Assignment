@@ -5,7 +5,7 @@ jobs:
       - image: advaitkukade/html:v2.0
     steps:
     - checkout 
-    - run: curl localhost
+    - run: cat index.html
 workflows:
   version: 2 
   build_one:
