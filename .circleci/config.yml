@@ -20,4 +20,4 @@ jobs:
           command: echo ${MY_ENV_VAR}
       - run:
           name: "What machine config am i using ?"
-          command: echo $CIRCLE_ARCH 
+          command: echo $CIRCLE_EXECUTOR 
