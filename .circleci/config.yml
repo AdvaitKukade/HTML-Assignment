@@ -30,3 +30,6 @@ jobs:
       - run:
           name: "Name of the repository of the current project ?"
           command: echo $CIRCLE_PROJECT_REPONAME    
+      - run: echo $CIRCLE_NODE_TOTAL
+      - run: echo $CIRCLE_COMPARE_URL
+      - run: echo $CIRCLE_INTERNAL_TASK_DATA
