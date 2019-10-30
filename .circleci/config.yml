@@ -18,3 +18,6 @@ jobs:
       - run:
           name: "What was my custom environment variable ?"
           command: echo ${MY_ENV_VAR}
+      - run:
+          name: "What machine config am i using ?"
+          command: echo $CIRCLE_ARCH 
