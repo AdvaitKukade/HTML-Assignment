@@ -2,10 +2,13 @@ version: 2
 jobs:
   build:
     docker: 
+      - image: nginx:latest 
       - image: advaitkukade/html:v2.0
     steps:
-    - checkout 
-    - run: cat index.html
+    - checkout
+    - run: cp index.html /var/www/html/
+    - run: echo "File Copied" 
+    - run: curl localhost
 workflows:
   version: 2 
   build_one:
