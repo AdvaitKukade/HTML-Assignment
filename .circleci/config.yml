@@ -5,6 +5,7 @@ jobs:
       - image: nginx
     steps:
     - run: echo "In nginx_job"
+    - run: pwd
     - run: cd ..
     - run: ls -al
     - run: cp /root/project/index.html /usr/share/nginx/html/
