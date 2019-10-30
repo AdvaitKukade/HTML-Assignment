@@ -6,9 +6,7 @@ jobs:
       - image: advaitkukade/html:v2.0
     steps:
     - checkout
-    - run: cp index.html /var/www/html/
-    - run: echo "File Copied" 
-    - run: curl localhost
+    - run: ls -al
 workflows:
   version: 2 
   build_one:
