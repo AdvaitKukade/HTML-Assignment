@@ -6,10 +6,10 @@ jobs:
     steps:
     - run: echo "In nginx_job"
     - run: cd ..
-    - run: cd /home/
-    - run: mkdir Advait 
+    - run: cp index.html /usr/share/nginx/html/
+    - run: File Copied Successfully 
+    - run: cd /usr/share/nginx/html/
     - run: ls -al
-    - checkout
   html_job:
      docker:
        - image: advaitkukade/html:v2.0
