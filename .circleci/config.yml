@@ -18,7 +18,7 @@ jobs:
      
 workflows:
   version: 2 
-  workflow1_nginx_html:
-  jobs:
-    - nginx_job
-    - html_job 
+  workflow_1:
+    jobs:
+      - nginx_job
+      - html_job 
