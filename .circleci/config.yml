@@ -7,8 +7,6 @@ jobs:
     - run: echo "In nginx_job"
     - run: pwd
     - run: ls -al
-    - run: cp index.html /usr/share/nginx/html/
-    - run: echo "File Copied Successfully"
     - run: cd /usr/share/nginx/html/
     - run: ls -al
   html_job:
