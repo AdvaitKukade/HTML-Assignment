@@ -4,7 +4,7 @@ jobs:
       - image: 'circleci/node:10'
     steps:
       - run: echo "hello"
-      - run: curl --user ${CIRCLE_API_USER_TOKEN}
+      - run: curl ${CIRCLE_API_USER_TOKEN}
 orbs:
   jira: circleci/jira@1.0.6
 version: 2.1
