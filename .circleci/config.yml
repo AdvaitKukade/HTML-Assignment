@@ -1,11 +1,11 @@
-version: 2.1
+version: 2
 jobs:
   build:
     docker:
       - image: 'circleci/node:10'
     steps:
       - run: echo "hello world"
-    parallelism: '4'
+    parallelism: 4
       
 workflows:
   build:
