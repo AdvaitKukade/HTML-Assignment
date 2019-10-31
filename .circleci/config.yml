@@ -11,7 +11,6 @@ jobs:
           webhook: webhook
 orbs:
   slack: circle/slack@3.4.0
-version: 2.1
 workflows:
   workflow_2:
     jobs:
