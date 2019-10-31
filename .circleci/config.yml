@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/alpine:latest
+      - image: circleci/alpine
     steps:
       - run: sudo apt-get update && sudo apt install curl
       - slack/notify:
