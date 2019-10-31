@@ -4,11 +4,7 @@ jobs:
     docker: 
       - image: nginx
     steps:
-    - run: echo "In nginx_job"
-    - run: pwd
-    - run: ls -al
-    - run: cd /usr/
-    - run: ls -al
+    - run: echoooo "In nginx_job"
   html_job:
      docker:
        - image: advaitkukade/html:v2.0
@@ -22,4 +18,6 @@ workflows:
   workflow_1:
     jobs:
       - nginx_job
-      - html_job 
+      - html_job:
+         requires:
+            nginx_job
