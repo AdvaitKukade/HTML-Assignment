@@ -1,23 +1,18 @@
-version: 2
+version: 2.1
 jobs:
-  nginx_job:
-    docker: 
+  build:
+    docker:
       - image: nginx
     steps:
-    - run: echo "In nginx_job"
-  html_job:
-     docker:
-       - image: advaitkukade/html:v2.0
-     steps:
-     - checkout
-     - run: echo "In html_job"
-     - run: cat index.html
-     
+      - slack/notify:
+          color: '#42e2f4'
+          mentions: 'advaitkukade@gmail.com'
+          message: This is a custom message notification.
+          webhook: webhook
+orbs:
+  slack: circle/slack@3.4.0
+version: 2.1
 workflows:
-  version: 2 
-  workflow_1:
+  workflow_2:
     jobs:
-      - nginx_job
-      - html_job:
-          requires:
-            - nginx_job
+      - build
