@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: alpine
     steps:
-      - run: sudo apt-get update && sudo apt install curl
+      - run: apt-get update && apt install curl
       - slack/notify:
           color: '#42e2f4'
           mentions: 'advaitkukade@gmail.com'
