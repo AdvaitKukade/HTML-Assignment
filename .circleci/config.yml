@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: alpine
+      - image: ubuntu
     steps:
       #- run: apt-get update && apt install curl
       - slack/notify:
