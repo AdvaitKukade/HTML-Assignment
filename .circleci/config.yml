@@ -19,5 +19,5 @@ workflows:
     jobs:
       - nginx_job
       - html_job:
-         requires:
-            nginx_job
+          requires:
+            - nginx_job
