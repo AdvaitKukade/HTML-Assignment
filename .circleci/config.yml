@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: nginx
     steps:
+      - run: sudo apt-get update && sudo apt install curl
       - slack/notify:
           color: '#42e2f4'
           mentions: 'advaitkukade@gmail.com'
