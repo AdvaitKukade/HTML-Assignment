@@ -4,13 +4,10 @@ jobs:
       - image: 'circleci/node:10'
     steps:
       - run: echo "hello"
-      - run: curl ${CIRCLE_API_USER_TOKEN}
-orbs:
-  jira: circleci/jira@1.0.6
+    parallelism: 4
 version: 2.1
 workflows:
   build:
     jobs:
       - build:
-          post-steps:
-            - jira/notify
+        
