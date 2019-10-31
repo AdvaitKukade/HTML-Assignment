@@ -4,9 +4,8 @@ jobs:
     docker:
       - image: 'circleci/node:10'
     steps:
-      - run: echo "hello"
-    test:
-      parallelism: 4 
+      - run: echo "hello world"
+    parallelism: '4'
       
 workflows:
   build:
