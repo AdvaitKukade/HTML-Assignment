@@ -4,7 +4,7 @@ jobs:
     docker: 
       - image: nginx
     steps:
-    - run: echoooo "In nginx_job"
+    - run: echo "In nginx_job"
   html_job:
      docker:
        - image: advaitkukade/html:v2.0
