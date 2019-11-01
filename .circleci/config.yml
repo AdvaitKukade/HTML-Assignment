@@ -16,14 +16,7 @@ jobs:
     docker:
       - image: 'circleci/node:10'
     steps:
-      - run: echo "Caching restored". 
-      - restore_cache:
-          keys: 
-            - my-cache3
-            - my-cache3
-      - run: cat file1.txt
-      - run: cat file2.txt 
-         
+      - run: echo "In Job two."    
 workflows:
   workflow_1:
     jobs:
