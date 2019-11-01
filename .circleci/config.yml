@@ -6,7 +6,7 @@ jobs:
     steps:
       - restore_cache:
           keys:
-            - my-cache1
+            - mycache1
   two:
     docker:
       - image: 'circleci/node:10'
@@ -15,7 +15,7 @@ jobs:
       - run: echo "Username - user123" >> file2.txt
       - run: echo "secret-code- secret@123" >> file3.txt
       - save_cache:
-          key: my-cache1
+          key: mycache1
           paths:
             - file1.txt
             - file2.txt
@@ -24,8 +24,9 @@ jobs:
 workflows:
   workflow_1:
     jobs:
-      - one
-      - two:
+      - one:
           requires:
-            - one
+            - two
+      - two
+          
         
