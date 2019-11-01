@@ -16,7 +16,11 @@ jobs:
     docker:
       - image: 'circleci/node:10'
     steps:
-      - run: echo "In Job two."    
+      - run: echo "In Job two."
+      - restore_cache:
+          keys:
+            - my-cache
+            - my-cache1
 workflows:
   workflow_1:
     jobs:
