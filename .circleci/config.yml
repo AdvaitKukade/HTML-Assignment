@@ -24,9 +24,7 @@ jobs:
 workflows:
   workflow_1:
     jobs:
-      - one:
-          requires:
-            - two
+      - one
       - two
           
         
