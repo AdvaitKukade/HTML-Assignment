@@ -6,7 +6,7 @@ jobs:
     steps:
       - run: echo "Password - pass@123" >> file1.txt
       - run: echo "Username - user123" >> file2.txt
-      - run: echo "secret code- secret@123 >> file3.txt
+      - run: echo "secret-code- secret@123" >> file3.txt
       - save_cache:
           key: my-cache4
           paths: 
