@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  job_one:
     docker:
       - image: 'circleci/node:10'
     steps:
@@ -10,7 +10,15 @@ jobs:
           paths: 
             - file1.txt
       - run: echo "File Created Successfully with some data in it and cached it as well."
-            
+   job_two:
+     docker:
+       - image: 'circleci/node:10'
+     steps:
+       - restore_cache:
+           keys:
+             - my-cache
+       - run: cat file1.txt
+       - run: echo "Contents of the file appeared."
 workflows:
   workflow_1:
     jobs:
