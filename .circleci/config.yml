@@ -6,11 +6,11 @@ jobs:
     steps:
       - run: echo "Password - pass@123" >> file1.txt
       - run: echo "Username - user123" >> file2.txt
+      - run: echo "secret code- secret@123 >> file3.txt
       - save_cache:
-          key: my-cache3
+          key: my-cache4
           paths: 
-            - file1.txt
-            - file2.txt
+            - file3.txt
       - run: echo "File Created Successfully with some data in it and cached it as well."
   two:
     docker:
@@ -19,8 +19,11 @@ jobs:
       - run: echo "In Job two."
       - restore_cache:
           keys:
-            - my-cache
-            - my-cache1
+            - my-cache3
+            - my-cache4
+      - run: cat file1.txt
+      - run: cat file2.txt
+      - run: cat file3.txt
 workflows:
   workflow_1:
     jobs:
