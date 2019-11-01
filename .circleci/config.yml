@@ -22,6 +22,7 @@ jobs:
             - my-cache
             - my-cache
       - run: cat file1.txt
+      - run: cat file2.txt 
          
 workflows:
   workflow_1:
