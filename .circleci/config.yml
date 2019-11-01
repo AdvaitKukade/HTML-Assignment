@@ -7,9 +7,11 @@ jobs:
       - run: echo "Password - pass@123" >> file1.txt
       - run: echo "Username - user123" >> file2.txt
       - save_cache:
-          key: my-cache1
+          key: my-cache0
           paths: 
             - file1.txt
+          key: my-cache2
+          paths:
             - file2.txt
       - run: echo "File Created Successfully with some data in it and cached it as well."
   two:
@@ -19,8 +21,8 @@ jobs:
       - run: echo "Caching restored". 
       - restore_cache:
           keys: 
-            - my-cache1
-            - my-cache1
+            - my-cache0
+            - my-cache2
       - run: cat file1.txt
       - run: cat file2.txt 
          
