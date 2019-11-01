@@ -9,8 +9,7 @@ jobs:
       - run: echo "secret-code- secret@123" >> file3.txt
       - save_cache:
           key: my-cache4
-          paths: 
-            - file3.txt
+          paths:
       - run: echo "File Created Successfully with some data in it and cached it as well."
   two:
     docker:
@@ -21,8 +20,6 @@ jobs:
           keys:
             - my-cache4
             - my-cache3
-      - run: cat file1.txt
-      - run: cat file2.txt
       - run: cat file3.txt
 workflows:
   workflow_1:
