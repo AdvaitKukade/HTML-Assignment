@@ -5,10 +5,12 @@ jobs:
       - image: 'circleci/node:10'
     steps:
       - run: echo "Password - pass@123" >> file1.txt
+      - run: echo "Username - user123" >> file2.txt
       - save_cache:
           key: my-cache
           paths: 
             - file1.txt
+            - file2.txt
       - run: echo "File Created Successfully with some data in it and cached it as well."
   two:
     docker:
