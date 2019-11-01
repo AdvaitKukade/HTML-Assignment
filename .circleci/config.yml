@@ -5,7 +5,8 @@ jobs:
       - image: 'circleci/node:10'
     steps:
       - restore_cache:
-          key: 
+          keys: 
+            - my-cache
             - my-cache
       - run: echo "File Created Successfully with some data in it and cached it as well."
   two:
