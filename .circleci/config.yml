@@ -4,16 +4,8 @@ jobs:
     docker:
       - image: 'circleci/node:10'
     steps:
-      - run: echo "hello world"
-      - run: touch index.html
-      - run: touch page1.html
-      - run: touch page2.html
-      - run: touch page3.html
-      - run: touch backend1.js
-      - run: touch backend2.js
-      - run: touch backend3.js
-    parallelism: 2
-      
+      - run: echo "Password - pass@123" >> file1.txt
+      - run: echo "File Created Successfully with some data in it. "
 workflows:
   workflow_1:
     jobs:
