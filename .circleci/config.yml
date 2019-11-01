@@ -4,21 +4,22 @@ jobs:
     docker:
       - image: 'circleci/node:10'
     steps:
-      - restore_cache:
-          keys: 
-            - my-cache
-            - my-cache
-      - run: echo "File Created Successfully with some data in it and cached it as well."
-  two:
-    docker:
-      - image: 'circleci/node:10'
-    steps:
       - run: echo "Password - pass@123" >> file1.txt
       - save_cache:
           key: my-cache
           paths: 
             - file1.txt
-      - run: echo "Caching restored".      
+      - run: echo "File Created Successfully with some data in it and cached it as well."
+  two:
+    docker:
+      - image: 'circleci/node:10'
+    steps:
+      - run: echo "Caching restored". 
+      - restore_cache:
+          keys: 
+            - my-cache
+            - my-cache
+      - run: cat file1.txt
          
 workflows:
   workflow_1:
