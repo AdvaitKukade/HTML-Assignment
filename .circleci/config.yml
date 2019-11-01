@@ -19,8 +19,8 @@ jobs:
       - run: echo "In Job two."
       - restore_cache:
           keys:
-            - my-cache3
             - my-cache4
+            - my-cache3
       - run: cat file1.txt
       - run: cat file2.txt
       - run: cat file3.txt
