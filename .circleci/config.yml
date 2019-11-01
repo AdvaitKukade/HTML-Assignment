@@ -7,6 +7,9 @@ jobs:
       - restore_cache:
           keys:
             - mycache1
+      - run: cat file1.txt
+      - run: cat file2.txt
+      - run: cat file3.txt
   two:
     docker:
       - image: 'circleci/node:10'
