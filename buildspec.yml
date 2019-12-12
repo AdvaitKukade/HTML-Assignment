@@ -7,7 +7,7 @@ phases:
        - mkdir -p /var/www/html/
   build:
     commands:
-         - echo: "Copying the File"
+         - echo "Copying the File"
          - cp ./ /var/www/html/    
   artifacts:
     files:
