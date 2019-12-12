@@ -9,4 +9,4 @@ phases:
          - ls
 artifacts:
     files:
-      - ./     
+      - /codebuild/output/src339054308/src
