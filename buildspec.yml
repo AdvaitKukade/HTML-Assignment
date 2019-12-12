@@ -9,8 +9,9 @@ phases:
          - ls
 artifacts:
     files:
-      - ./scripts/start_server.sh
-      - ./CSS Files/HomePage.css
+      - ./scripts
+      - ./CSS Files
+      - ./images
       - index.html
       - appspec.yml
       - buildspec.yml
