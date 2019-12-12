@@ -9,4 +9,8 @@ phases:
          - ls
 artifacts:
     files:
-      - /codebuild/output/src339054308/src
+      - ./scripts/start_server.sh
+      - ./CSS Files/HomePage.css
+      - index.html
+      - appspec.yml
+      - buildspec.yml
