@@ -9,9 +9,5 @@ phases:
          - ls
 artifacts:
     files:
-      - scripts/
-      - CSS Files/
-      - images/
-      - index.html
-      - appspec.yml
-      - buildspec.yml
+      - '**/*'
+    base-directory: 'src*'
