@@ -8,8 +8,8 @@ phases:
   build:
     commands:
          - echo "Copying the File"
-         - cp ./ /var/www/html/    
+         - cp index.html /var/www/html/    
 artifacts:
     files:
       - /var/www/html/
-      - appspec.yml  
+      - appspec.yml
