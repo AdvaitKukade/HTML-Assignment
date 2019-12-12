@@ -9,7 +9,7 @@ phases:
     commands:
          - echo "Copying the File"
          - cp ./ /var/www/html/    
-  artifacts:
+artifacts:
     files:
       - /var/www/html/
       - appspec.yml  
