@@ -3,10 +3,8 @@ version: 0.2
 phases:
   build:
     commands:
-         - echo "Copying the File"
-         - cp index.html /var/www/html/    
+         - echo "Listing the Files"
+         - ls
 artifacts:
     files:
-      - /var/www/html
       - appspec.yml
-      - /scripts
