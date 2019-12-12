@@ -1,0 +1,15 @@
+version: 0.2
+
+phases: 
+  pre_build:
+   commands: 
+       - echo "Creating Path To Folder"
+       - mkdir -p /var/www/html/
+  build:
+    commands:
+         - echo: "Copying the File"
+         - cp ./ /var/www/html/    
+  artifacts:
+    files:
+      - /var/www/html/
+      - appspec.yml  
