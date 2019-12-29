@@ -1,33 +1,13 @@
 version: 2.1
-jobs:
-  one:
-    docker:
-      - image: 'circleci/node:10'
-    steps:
-      - restore_cache:
-          keys:
-            - mycache1
-      - run: cat file1.txt
-      - run: cat file2.txt
-      - run: cat file3.txt
-  two:
-    docker:
-      - image: 'circleci/node:10'
-    steps:
-      - run: echo "Password - pass@123" >> file1.txt
-      - run: echo "Username - user123" >> file2.txt
-      - run: echo "secret-code- secret@123" >> file3.txt
-      - save_cache:
-          key: mycache1
-          paths:
-            - file1.txt
-            - file2.txt
-            - file3.txt
-      - run: echo "File Created Successfully with some data in it and cached it as well."
 workflows:
-  workflow_1:
-    jobs:
-      - one
-      - two
-          
-        
+  deploy_application: 
+    jobs: 
+      - aws-code-deploy/deploy:
+          application-name: MyReactApp
+          deployment-group: MyReactApp-DG
+          service-role-arn: aws:iam::760603953831:role/CodeDeployServiceRole2
+          bundle-bucket: codefrontbucket
+          bundle-key: HTMLApp
+
+orbs:
+  aws-code-deploy: circleci/aws-code-deploy@0.0.11
