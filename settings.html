@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+       function btn_update()
+       {
+            alert("Thank you for updating details");
+            document.getElementById("user_id").value="";
+            document.getElementById("user_name").value="";
+       } 
+    </script>
+</head>
+<body> 
+    <h1>Welcome to the Account settings page.</h1>   
+    <br>
+    <p>Please enter the following details.</p>
+    <input type="text" id="user_id" placeholder="Enter your ID" required>
+    <br>
+    <input type="text" id="user_name" placeholder="Enter your Name" required>
+    <br>
+    <br>
+    <input type="submit" id="btn_update" value="Update" onclick="btn_update()">
+    <br>
+    <br>
+    <a href="index.html">Click here to go back</a>
+</body>
+</html>
